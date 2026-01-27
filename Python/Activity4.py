@@ -1,0 +1,38 @@
+while True:
+    user1 = input('Enter your player1  name:')
+    user2 = input('Enter your player2 name:')
+
+        
+    user1_answer = input(user1 + ", do you want to choose rock, paper or scissors? ").lower()
+    user2_answer = input(user2 + ", do you want to choose rock, paper or scissors? ").lower()
+
+    if user1_answer == user2_answer:
+        print('It is a tie')
+    elif user1_answer == 'rock':
+        if user2_answer == 'scissors':
+            print("Rock wins!")
+        else:
+            print("Paper wins!")
+    elif user1_answer == 'scissors':
+        if user2_answer == 'paper':
+            print("Scissors win!")
+        else:
+            print("Rock wins!")
+    elif user1_answer == 'paper':
+        if user2_answer == 'rock':
+            print("Paper wins!")
+        else:
+            print("Scissors win!")
+    else:
+        print("Invalid input! You have not entered rock, paper or scissors, try again.")
+
+    
+    Isrepeat =input('Do you want to play this game again:')
+    if(Isrepeat == 'yes'):
+        print('The game should begin again.')
+    elif(Isrepeat == 'no'):
+        print('The game should exit.')
+        break
+    else:
+        print('Invalid input.')
+        break
