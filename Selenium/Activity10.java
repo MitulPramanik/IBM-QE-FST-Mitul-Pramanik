@@ -1,12 +1,11 @@
 package selenium;
-import org.openqa.selenium.interactions.Action;
+
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.Color;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.Color;
+
 
 public class Activity10 {
     public static void main(String[] args) {
@@ -18,12 +17,12 @@ public class Activity10 {
         WebElement dropzone1 = driver.findElement(By.id("dropzone1"));
         WebElement dropzone2 = driver.findElement(By.id("dropzone2"));
 
-        builder.clickAndHold(ball).pause(1000).moveToElement(dropzone1).release().build().perform();
+        builder.clickAndHold(ball).pause(5000).moveToElement(dropzone1).pause(5000).release().build().perform();
 
         if(dropzone1.findElement(By.className("dropzone-text")).getText().equals("Dropped!")) {
         	System.out.println("Ball was dropped in Dropzone 1");
         }
-        builder.dragAndDrop(ball,dropzone2).pause(1000).build().perform();
+        builder.dragAndDrop(ball,dropzone2).pause(5000).build().perform();
         if(dropzone2.findElement(By.className("dropzone-text")).getText().equals("Dropped!")) {
         	System.out.println("Ball was dropped in Dropzone 2");
         }
